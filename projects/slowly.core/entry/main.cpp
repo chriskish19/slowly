@@ -11,16 +11,8 @@
 #include CORE_NAMES_INCLUDE
 #include CORE_STL_INCLUDE_PATH
 
-enum class codes {
-    success = 0,
-    uninit,
-    invalid_file_path,
-};
-
-
-
-// functions
-codes translate(std::filesystem::path sl_file);
+// tokens vector unqiue pointer
+std::unique_ptr<std::vector<std::string>> tokens_v = std::make_unique<std::vector<std::string>>();
 
 
 int main(int argc, char* argv[]) {
@@ -34,16 +26,5 @@ int main(int argc, char* argv[]) {
 
     // parse each .sl file and translate into c++
 
-
-
     return 0;
-}
-
-codes translate(std::filesystem::path sl_file) {
-    // check if file exists
-    if (std::filesystem::exists(sl_file) == false) {
-        return codes::invalid_file_path;
-    }
-
-
 }

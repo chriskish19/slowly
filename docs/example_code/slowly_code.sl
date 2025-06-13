@@ -1,13 +1,11 @@
 
 
+// comment
 
-
-main(ray arg){
+main(array arg){
 	loop(arg : i){
-		auto element = arg.i;
-		if (element == 0){
-			print("hello ", element);
-		}
+		auto element = i;
+		print("hello", element);
 	}
 }
 
